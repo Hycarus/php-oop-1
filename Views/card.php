@@ -10,10 +10,13 @@
             </p>
             <div class="d-flex justify-content-between align-items-flex-start">
                 <?= $custom ?>
-                <div>
-                    <?= $genre ?>
-                </div>
+
             </div>
+            <?php foreach ($genre as $item) { ?>
+                <div>
+                    <?= $item->name ?>
+                </div>
+            <?php } ?>
             <div class="w-25">
                 <img class="w-100" src="<?= $flag ?>" alt="">
             </div>
