@@ -32,6 +32,12 @@ class Movie
         return $template;
     }
 
+    public function getFlag()
+    {
+        $flag = 'img/' . $this->original_language . '.gif';
+        return $flag;
+    }
+
     public function printCard()
     {
         $image = $this->poster_path;
@@ -39,6 +45,7 @@ class Movie
         $content = $this->overview;
         $custom = $this->getVote();
         $genre = $this->genre->name;
+        $flag = $this->getFlag();
         include __DIR__ . '/../Views/card.php';
     }
 }
@@ -55,5 +62,4 @@ foreach ($movieList as $item) {
     // $randgenre = $genres[rand(0, count($genres) - 1)];
     $movies[] = new Movie($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['poster_path'], $item['original_language'], $action);
 }
-// var_dump($movies);
 // var_dump($movies[0]->title);

@@ -14,7 +14,9 @@
                     <?= $genre ?>
                 </div>
             </div>
-
+            <div class="w-25">
+                <img class="w-100" src="<?= $flag ?>" alt="">
+            </div>
         </div>
     </div>
 </div>
